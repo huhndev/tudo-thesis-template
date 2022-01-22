@@ -1,4 +1,4 @@
-\ProvidesClass{tudo-sse-thesis}[2021/10/05 v1.0 TU Dortmund Secure Software Engineering Group Thesis Template]
+\ProvidesClass{tudo-thesis}
 \NeedsTeXFormat{LaTeX2e}
 \LoadClass[titlepage=firstiscover]{scrbook}
 
@@ -135,7 +135,7 @@
 
 % Title page
 \newcommand\firstexaminer[1]{\renewcommand\@firstexaminer{#1}}
-\newcommand\@firstexaminer{JProf.\ Dr.-Ing.\ Ben Hermann}
+\newcommand\@firstexaminer{\@latex@error{No \noexpand\firstexaminer given}\@ehc}
 
 \newcommand\secondexaminer[1]{\renewcommand\@secondexaminer{#1}}
 \newcommand\@secondexaminer{\@latex@error{No \noexpand\secondexaminer given}\@ehc}
@@ -153,19 +153,13 @@
     \cleardoublepage
     \pagestyle{empty}
 
-    \begin{textblock}{8}(1,11)
-      \small \raggedright \noindent \sffamily
+    \begin{textblock}{9,5}(1,11)
+      \small \noindent \sffamily \centering
       \setlength{\columnsep}{-5.9cm}
-      \begin{multicols}{2}
-        \includegraphics[width=2cm]{logos/sse_logo.pdf}
-        \columnbreak
-
         Technische Universität Dortmund \\
         Fakultät für Informatik \\
-        Lehrstuhl V - Programmiersysteme \\
-        Fachgruppe Softwaretechnik sicherer Systeme \\
-        \url{https://sse.cs.tu-dortmund.de}
-      \end{multicols}
+        Lehrstuhl ? - ? \\
+        \url{https://www.tu-dortmund.de}
     \end{textblock}
 
     \centering\sffamily
@@ -179,6 +173,10 @@
     \vspace{1cm}
 
     {\Huge\bfseries\@title}
+
+    \vspace{1cm}
+
+    {\Large\bfseries\@subtitle}
 
     \vspace{1cm}
 
